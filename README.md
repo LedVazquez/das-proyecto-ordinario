@@ -76,7 +76,7 @@ Otra manera de poder visualizar las transacciones pero esta ves de manera render
 * En el endpoint: transactions/grouped_by_type con el método: GET somos capaces de ver un resumen que nos muestra el `inflow` y `outflow` total por usuario. 
   * GET /transactions/grouped_by_type
 
-![image](https://user-images.githubusercontent.com/71090472/173277697-f8bcf635-c53c-4964-99b9-af5b70d88b64.png)
+![image](https://user-images.githubusercontent.com/71090472/173278274-ee1a9487-0c6a-43e9-afc5-6737535aee2e.png)
 
 * En el endpoint: transactions/Eric Powell/summary podemos ver un resumen del usuario (Eric Powell) por categoría en formato JSON, este endpoint muestra la suma de cantidades por categoría de transacción.
 
