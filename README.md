@@ -7,17 +7,15 @@
 
 ## Herramientas utilizadas:
 - [Docker](https://www.docker.com)
+  - Docker Files
+  - Docker Compose  
 - [Python](https://www.python.org)
+  - PyMongo
+  - Numpy
+  - Faker
+  - Flask
 - [Mongodb](https://www.mongodb.com)
 - [Mongo-express](https://hub.docker.com/_/mongo-express)
-
-
-## Documentación:
-- [Docker](https://docs.docker.com)
-- [Python](https://docs.python.org/3)
-- [Mongodb](https://www.mongodb.com/docs)
-- [Flask](https://flask.palletsprojects.com/en/2.1.x)
-- [Markdown](https://www.markdownguide.org/basic-syntax)
 
 ## Clases utilizadas en nuestro proyecto:
 
@@ -81,3 +79,10 @@ Otra manera de poder visualizar las transacciones pero esta ves de manera render
 * En el endpoint: transactions/Eric Powell/summary podemos ver un resumen del usuario (Eric Powell) por categoría en formato JSON, este endpoint muestra la suma de cantidades por categoría de transacción.
 
 ![image](https://user-images.githubusercontent.com/71090472/173277988-e11d29ae-e5b1-425f-8871-5c404cc7ef24.png)
+
+## Documentación:
+- [Docker](https://docs.docker.com)
+- [Python](https://docs.python.org/3)
+- [Mongodb](https://www.mongodb.com/docs)
+- [Flask](https://flask.palletsprojects.com/en/2.1.x)
+- [Markdown](https://www.markdownguide.org/basic-syntax)
