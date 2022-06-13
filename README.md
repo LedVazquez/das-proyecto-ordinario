@@ -5,7 +5,7 @@
 - Adrian Led Vazquez Herrera - [@LedVazquez](https://github.com/LedVazquez)
 - Jesús Raúl Alvarado Torres - [@RaulAlvaradoT](https://github.com/RaulAlvaradoT)
 
-## Utilizamos:
+## Herramientas utilizadas:
 - [Docker](https://www.docker.com)
 - [Python](https://www.python.org)
 - [Mongodb](https://www.mongodb.com)
@@ -61,67 +61,23 @@ Con las clases anteriormente descritas e implementadas en código es posible tom
 
 Con ayuda de un documento de tipo `docker-compose.yml` podemos crear imagenes e inicializar containers de: mongo_db, mongo-express y flask, con el contenedor de mongo_db podemos crear la base de datos de las de las transacciones de los usuarios y una ves habiendo generado las transacciones de manera aleatoria, podemos crear una colección que contenga todas las transacciones. 
 
-## Screenshots:
+![image](https://user-images.githubusercontent.com/71090472/173277538-3b2c4c1c-47ba-44a0-8da3-1c6b2a305fb2.png)
 
 Utilizando mongo-express en el host:localhost, puerto:8081, es posible visualizar la base de datos posteriormente creada y llenada:
 
-![image](https://user-images.githubusercontent.com/71090472/173273141-96a8720b-2c56-4651-8a23-afcaccea1cde.png)
+![image](https://user-images.githubusercontent.com/71090472/173277625-e4e0d63b-7306-4255-a75d-1b020718d301.png)
 
-![image](https://user-images.githubusercontent.com/71090472/173273163-198028a0-cce7-4cea-9258-5977e3435ec8.png)
+![image](https://user-images.githubusercontent.com/71090472/173277663-c8c3c36d-5162-4130-afe1-7b48411b2adf.png)
 
-Otra manera de poder visualizar las transacciones pero esta ves de manera renderizada en HTML en formato JSON, es con el uso del container de Flask en el host:http://192.168.1.71/, puerto:5000, endpoint:transactions (contenedor creado en nuestro docker-compose)
+Otra manera de poder visualizar las transacciones pero esta ves de manera renderizada en HTML en formato JSON, es con el uso del container de Flask en el host: http://192.168.1.71/, puerto: 5000, endpoint: transactions (contenedor creado en nuestro docker-compose)
 
 ![image](https://user-images.githubusercontent.com/71090472/173273721-45946101-aae4-4d61-bff0-0aa931a5050e.png)
 
-1.- En el endpoint:transactions/grouped_by_type con el método:GET somos capaces de ver un resumen que nos muestra el `inflow` y `outflow` total por usuario. 
-* GET /transactions/grouped_by_type
+* En el endpoint: transactions/grouped_by_type con el método: GET somos capaces de ver un resumen que nos muestra el `inflow` y `outflow` total por usuario. 
+  * GET /transactions/grouped_by_type
 
+![image](https://user-images.githubusercontent.com/71090472/173277697-f8bcf635-c53c-4964-99b9-af5b70d88b64.png)
 
-2.- Queremos poder ver un resumen de usuario por categoría que muestre la suma de cantidades por categoría de transacción. Ejemplo:
+* En el endpoint: transactions/Eric Powell/summary podemos ver un resumen del usuario (Eric Powell) por categoría en formato JSON, este endpoint muestra la suma de cantidades por categoría de transacción.
 
-```json
-GET /transactions/{user_email}/summary
-
-{
-    "inflow": {
-        "salary": "2500.72",
-        "savings": "150.72"
-    },
-    "outflow": {
-        "groceries": "-51.13",
-        "rent": "-560.00",
-        "transfer": "-150.72"
-    }
-}
-```
-
-### Expectativas
-
-* Construye la aplicación utilizando `Python`
-* Los endpoints o rutas son solo ejemplos, siéntete libre de cambiarlos de acuerdo a tus necesidades, solamente se espera que sigas el formato de respuesta
-* Agrega test unitarios y/o de integración
-* Optimiza en función del tiempo disponible y no del rendimiento de la aplicación
-* Dockeriza tu aplicación en base a lo visto en clase :wink:
-* Utiliza [`Flask`](https://flask.palletsprojects.com/en/2.1.x/) (y [`flask-restful`](https://flask-restful.readthedocs.io/en/latest/)), [`FastApi`](https://fastapi.tiangolo.com/) o [`Django`](https://www.djangoproject.com/) (y [`DRF`](https://www.django-rest-framework.org/)) como alguno de los frameworks para tu API
-* La base de datos es libre
-
-#### Opcional - Puntos Extra
-
-Los siguientes puntos son opcionales, sin embargo implementarlos provee **3** puntos extra por cada uno sobre la **calificación total final**.
-
-* Utilizar [Swagger](https://swagger.io/) en tu proyecto y agregar un contenedor nuevo con el [`Swagger UI`](https://hub.docker.com/r/swaggerapi/swagger-ui) de la aplicación
-* Agregar [RabbitMQ](https://www.rabbitmq.com/) para alguna o todas las operaciones CRUD de la aplicación
-* Agregar un contenedor extra que provea un frontend (GUI) que consuma la API que creaste. Acá puedes utilizar tecnologías como `HTML`, `CSS`, `Javascript`, `Bootstrap`, `Vue`, `Angular` o `ReactJS` para hacer más rápido este proceso. Queda a tu criterio, imaginación y creatividad el cómo luzca la interfaz final :wink:
-* Agregar testing y/o automatización de pruebas por medio de <https://github.com/testcontainers/testcontainers-python>
-
-### Conclusión
-
-Crear un archivo `README.md` en el que se incluya lo siguiente:
-
-* Un diagrama de la arquitectura de tu proyecto y un diagrama de la base de datos (`DER`). Pueden apoyarse de algunas herramientas como <https://github.com/mingrammer/diagrams> o <https://app.diagrams.net/> para generar los diagramas del proyecto. Este diagrama también debe de incluirse como imágen dentro del proyecto final
-* Los pasos a seguir detallados y concisos que indiquen como hacer funcionar el proyecto, de tal manera que pueda ser revisado sin mayores complicaciones
-
-Finalmente, agreguen un video en equipo, en donde se exponga a detalle su proyecto y se hagan pruebas con él. Queda a criterio del propio equipo el como llevar a cabo la presentación, pero sí es necesario que cada miembro participe en la misma.
-
-* Llevar a cabo este punto por medio de `MS Teams` y subir el archivo `.mp4` a algún drive público adjuntando el link de acceso al video al archivo `README`.md
-* La exposición no debe tener una duración mayor a **15** minutos
+![image](https://user-images.githubusercontent.com/71090472/173277988-e11d29ae-e5b1-425f-8871-5c404cc7ef24.png)
