@@ -77,6 +77,7 @@ Otra manera de poder visualizar las transacciones pero esta ves de manera render
 ![image](https://user-images.githubusercontent.com/71090472/173278274-ee1a9487-0c6a-43e9-afc5-6737535aee2e.png)
 
 * En el endpoint: transactions/Eric Powell/summary podemos ver un resumen del usuario (Eric Powell) por categoría en formato JSON, este endpoint muestra la suma de cantidades por categoría de transacción.
+  * GET /transactions/Eric Powell/summary
 
 ![image](https://user-images.githubusercontent.com/71090472/173277988-e11d29ae-e5b1-425f-8871-5c404cc7ef24.png)
 
