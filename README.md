@@ -18,6 +18,7 @@
 - [Mongo-express](https://hub.docker.com/_/mongo-express)
 
 ## Diagrama de Microservicios
+![image](https://user-images.githubusercontent.com/71090472/173287560-faabb081-538b-48e0-bd5a-ed1878aa84d4.png)
 
 ## Clases utilizadas en nuestro proyecto:
 
